@@ -1,0 +1,14 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% block body_class %}login{% endblock %}
+
+
+{% block h1 %}
+    <h1>Account Access</h1>
+{% endblock %}
+
+
+
+{% block fos_user_content %}
+    {{ include('@FOSUser/Security/login_content.html.twig') }}
+{% endblock fos_user_content %}

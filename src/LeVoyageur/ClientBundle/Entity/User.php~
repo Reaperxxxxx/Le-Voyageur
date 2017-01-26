@@ -1,0 +1,65 @@
+<?php
+
+
+namespace LeVoyageur\ClientBundle\Entity;
+
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="user")
+ */
+class User extends BaseUser
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    public $id;
+
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    public $Nom;
+
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    public $Prenom;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date",type="date")
+     */
+    public $datenaissance;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public $num_tel;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public $num_tel_secour;
+
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    public $type_rand;
+
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    public $url = "amateur";
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
+}

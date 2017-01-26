@@ -1,0 +1,26 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+
+{{ form_widget(form.username, { 'attr': {'placeholder': "Username"} }) }}<br>
+{{ form_widget(form.Nom, { 'attr': {'placeholder': "First Name"} }) }}<br>
+{{ form_widget(form.Prenom, { 'attr': {'placeholder': "Last Name"} }) }}<br>
+{{ form_widget(form.email, { 'attr': {'placeholder': "Email"} }) }}<br>
+{{ form_widget(form.num_tel, { 'attr': {'placeholder': "Phone Number"} }) }}<br>
+{{ form_widget(form.num_tel_secour, { 'attr': {'placeholder': "SoS Phone Number"} }) }}<br>
+{{ form_widget(form.datenaissance, { 'attr': {'class': 'calendar'} }) }}<br>
+{{ form_widget(form.plainPassword.first, { 'attr': {'placeholder': "Password"} }) }}<br>
+{{ form_widget(form.plainPassword.second, { 'attr': {'placeholder': "Repeat password"} }) }}<br>
+{{ form_widget(form.type_rand, { 'attr': {} }) }}<br>
+
+
+
+
+
+    <div>
+        <input type="submit" class="btn btn-primary" value="{{ 'registration.submit'|trans }}" />
+
+    </div>
+
+{{ form_end(form) }}

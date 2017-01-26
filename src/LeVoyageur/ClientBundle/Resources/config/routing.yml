@@ -1,0 +1,8 @@
+le_voyageur_client_homepage:
+    path:     /
+    defaults: { _controller: LeVoyageurClientBundle:Default:index }
+
+home:
+    path:     /home
+    defaults: { _controller: LeVoyageurClientBundle:User:home }
+

@@ -1,0 +1,16 @@
+event:
+    resource: "@EventBundle/Resources/config/routing.yml"
+    prefix:   /Event
+
+le_voyageur_client:
+    resource: "@LeVoyageurClientBundle/Resources/config/routing.yml"
+    prefix:   /Client
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
